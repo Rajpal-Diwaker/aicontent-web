@@ -1,0 +1,89 @@
+<div class="header-wrapper fixed-header" id="myHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 padding-0">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+              aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand pointer" [routerLink]="['/home']">
+              <img src="assets/images/logo.png" alt="ContentWiz-logo">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-9 padding-0 mobile-hide">
+          <div id="navbar" class="navbar-collapse" aria-expanded="false">
+            <ul class="nav navbar-nav">
+              <li><a (click)="triggerScrollTo('article')" class="pointer">Create Article</a></li>
+              <li><a (click)="triggerScrollTo('article')" class="pointer">Upload Article</a></li>
+              <li><a (click)="triggerScrollTo('how-it-works')" class="pointer">How it works</a></li>
+              <li><a (click)="triggerScrollTo('price-list')" class="pointer">Price list</a></li>
+              <li *ngIf="contentWizToken"><a class="pointer" (click)="goto('article')">My articles</a></li>
+              <li><a (click)="triggerScrollTo('contact-us')" class="pointer">Contact Us</a></li>
+              <li *ngIf="!contentWizToken" class="login-btn" data-toggle="modal" data-target="#signup"><a class="pointer">LOGIN/SIGNUP</a></li>
+              <li *ngIf="contentWizToken">
+                <a class="pointer">
+                  <div class="profile" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="image-rw">
+                      <img src="assets/images/profile.png" alt="profile">
+                    </div>
+                    <span> {{ userObj.name | titlecase }} <i class="fa fa-angle-down"></i></span>
+                  </div>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                      <ul>
+                        <li (click)="goto('user/transaction')">Transactions</li>
+                        <li (click)="goto('user')">Profile</li>
+                        <li (click)="logout()">Logout</li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-default">
+    <div class="phone-tab">
+      <div class="navbar_collapse_inner">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a (click)="triggerScrollTo('article')" class="pointer">Create Article</a></li>
+          <li><a (click)="triggerScrollTo('article')" class="pointer">Upload Article</a></li>
+          <li><a (click)="triggerScrollTo('how-it-works')">How it works</a></li>
+          <li><a (click)="triggerScrollTo('price-list')">Price list</a></li>
+          <li *ngIf="contentWizToken"><a (click)="goto('article')">My articles</a></li>
+          <li><a (click)="triggerScrollTo('contact-us')">Contact Us</a></li>
+          <li *ngIf="!contentWizToken" class="login-btn" data-toggle="modal" data-target="#signup"><a class="pointer">LOGIN/SIGNUP</a></li>
+          <li *ngIf="contentWizToken">
+            <a class="pointer">
+              <div class="profile" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <div class="image-rw">
+                  <img src="assets/images/profile.png" alt="profile">
+                </div>
+                <span> {{ userObj.name | titlecase }} <i class="fa fa-angle-down"></i></span>
+              </div>
+              <div class="collapse" (click)="logout()" id="collapseExample">
+                <div class="card card-body">
+                  <ul>
+                    <li>Logout</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <span class="close-menu">
+          <img src="assets/images/close.png" alt="close">
+        </span>
+      </div>
+      <div class="overlayshow"></div>
+    </div>
+  </nav>
+  

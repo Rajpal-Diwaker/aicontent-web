@@ -1,0 +1,29 @@
+
+    <!-- Price section starts here -->
+    <section class="price-wrapper">
+      <div class="price-rw" id="price-list">
+        <div class="container">
+          <h2>price list</h2>
+          <div class="price-content row">
+            <div class="col-xs-12 col-sm-4 padding-0" *ngFor="let item of priceList">
+              <div class="price-listing">
+                <div class="price-rw">
+                  <h3>{{item.currency}}{{item.price}}</h3>
+                  <span>For {{item.duration}}</span>
+                </div>
+                <div class="about-price">
+                  <ul>
+                    <li>high quality content</li>
+                    <li>content passes copyscape</li>
+                    <li>no proxies required</li>
+                    <li>no programming required</li>
+                    <li>no scraping required</li>
+                  </ul>
+                  <a class="pointer" (click)="freeTrial(item.plan)">Start my free trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

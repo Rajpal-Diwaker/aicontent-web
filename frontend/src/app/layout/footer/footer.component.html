@@ -1,0 +1,263 @@
+<section class="footer-wrapper" [class.footer-other]="footerClass">
+  <div class="footer-rw">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-2 padding-0 list-rw clearfix">
+          <a class="navbar-brand pointer" [routerLink]="['/home']">
+            <img src="assets/images/logo.png" alt="ContentWiz-logo">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 list-rw">
+          <div class="footer-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 list-rw">
+          <div class="footer-listing">
+            <ul>
+              <li><a (click)="triggerScrollTo('article')" class="effect-shine pointer">Create Article</a></li>
+              <li><a (click)="triggerScrollTo('article')" class="effect-shine pointer">Upload Article</a></li>
+              <li><a class="effect-shine pointer">About Us</a></li>
+              <li *ngIf="contentWizToken"><a class="pointer" (click)="goto('article')">My articles</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 list-rw">
+          <div class="footer-listing">
+            <ul>
+              <li><a (click)="triggerScrollTo('price-list')" class="effect-shine pointer">Price List</a></li>
+              <li><a (click)="triggerScrollTo('contact-us')" class="effect-shine pointer">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Login section starts here -->
+  <div class="modal fade signup-wrap" id="signup" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="signup-rw row">
+            <div class="col-md-6 signup-content padding-0">
+              <div class="sign-logo">
+                <a href="#">
+                  <img src="assets/images/contentwiz.png" alt="contentwiz-logo">
+                </a>
+              </div>
+              <form [formGroup]="signupFrm" (ngSubmit)="signup()">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Name" formControlName="name">
+                  <div *ngIf="signupSubmitted && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required"><span style='color: red;'>Name is required</span></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Number" formControlName="phone">
+                  <div *ngIf="signupSubmitted && f.phone.errors" class="invalid-feedback">
+                    <div *ngIf="f.phone.errors.required"><span style='color: red;'>Phone is required</span></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                  <div *ngIf="signupSubmitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required"><span style='color: red;'>Email is required</span></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                  <div *ngIf="signupSubmitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required"><span style='color: red;'>Password is required</span></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Company Name" formControlName="company_name">
+                  <div *ngIf="signupSubmitted && f.company_name.errors" class="invalid-feedback">
+                    <div *ngIf="f.company_name.errors.required"><span style='color: red;'>company name is
+                        required</span></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Designation" formControlName="designation">
+                  <div *ngIf="signupSubmitted && f.designation.errors" class="invalid-feedback">
+                    <div *ngIf="f.designation.errors.required"><span style='color: red;'>Designation is required</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary"><i *ngIf="signupSubmitted"
+                    class="fa fa-circle-o-notch fa-spin"></i> signup</button>
+                <p class="msg-text">already have an account?<a href="" data-toggle="modal" data-target="#signin"
+                    data-dismiss="modal">login</a></p>
+              </form>
+            </div>
+            <div class="col-md-6 image-sign mobile-hide signup-image padding-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade signup-wrap signin-wrap" id="signin" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="signup-rw row">
+            <div class="col-md-6 signup-content padding-0">
+              <div class="sign-logo">
+                <a href="#">
+                  <img src="assets/images/contentwiz.png" alt="contentwiz-logo">
+                </a>
+              </div>
+              <form [formGroup]="loginFrm" (ngSubmit)="login()">
+                <div *ngIf="errMessage" class="invalid-feedback">
+                  <div><span style='color: red;'>{{ errMessage }}</span></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                  <div *ngIf="loginSubmitted && f.email.errors && f.email.touched" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required"><span style='color: red;'>Email is required</span></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                  <div *ngIf="loginSubmitted && f.password.errors && f.password.touched" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required"><span style='color: red;'>Password is required</span></div>
+                  </div>
+                </div>
+                <div class="forgot-rw">
+                  <div class="check-rw clearfix">
+                    <input type="checkbox" (change)="rememberMe($event.target.checked)" [checked]="cookieUser">
+                    <span>Remember me</span>
+                  </div>
+                  <a href="" data-toggle="modal" data-target="#forgot" data-dismiss="modal">Forgot password</a>
+                </div>
+                <button type="submit" class="btn btn-primary"><i *ngIf="loginSubmitted"
+                    class="fa fa-circle-o-notch fa-spin"></i> sign in</button>
+                <p class="msg-text">Don't have an account yet?<a href="" data-toggle="modal" data-target="#signup"
+                    data-dismiss="modal">signup</a></p>
+              </form>
+            </div>
+            <div class="col-md-6 image-sign mobile-hide signup-image padding-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade signup-wrap signin-wrap forgot-wrap" id="forgot" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="signup-rw row">
+            <div class="col-md-6 signup-content padding-0">
+              <div class="sign-logo">
+                <a href="#">
+                  <img src="assets/images/contentwiz.png" alt="contentwiz-logo">
+                </a>
+              </div>
+              <h4>forgot password</h4>
+              <p>Enter the registered email address. We will email you a link to reset your password.</p>
+              <form [formGroup]="forgotPasswordFrm" (ngSubmit)="forgotPassword()">
+                <div class="form-group">
+                  <input type="text" formControlName="email" class="form-control" placeholder="Email">
+                </div>
+                <!-- data-toggle="modal" data-target="#verifylink" data-dismiss="modal" -->
+                <button type="submit" class="btn btn-primary"><i *ngIf="forgotPasswordFlag"
+                    class="fa fa-circle-o-notch fa-spin"></i> send</button>
+              </form>
+            </div>
+            <div class="col-md-6 image-sign mobile-hide signup-image padding-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade signup-wrap signin-wrap forgot-wrap verify-wrap" id="verifylink" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="signup-rw row">
+            <div class="col-md-6 signup-content padding-0">
+              <div class="sign-logo">
+                <a href="#">
+                  <img src="assets/images/contentwiz.png" alt="contentwiz-logo">
+                </a>
+              </div>
+              <h4>otp verification</h4>
+              <p>Enter the OTP sent to {{forgotF?.email?.value}}</p>
+              <form [formGroup]="otpfrm" (ngSubmit)="otpFrmSubmit()">
+                <div class="form-group">
+                  <input type="text" formControlName="first" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                  <input type="text" formControlName="second" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                  <input type="text" formControlName="third" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                  <input type="text" formControlName="fourth" class="form-control" placeholder="">
+                </div>
+                <button type="submit" class="btn btn-primary">verify</button>
+              </form>
+            </div>
+            <div class="col-md-6 image-sign mobile-hide signup-image padding-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="filter" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span>Add Filter</span>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" [formGroup]="filterForm">
+          <div class="filter-search">
+            <div class="form-group">
+              <select class="form-control" formControlName="industryType">
+                <option value="all">All Industries</option>
+                <option *ngFor="let item of industryArr">{{ item.name | titlecase }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-wrap">
+            <label class="container" formArrayName="contentTypes"
+              *ngFor="let control of filterForm.get('contentTypes')?.controls; let i = index;">
+              <div [formGroupName]="i">{{ control?.value.name }}
+                <input type="checkbox" formControlName="isChecked">
+                <span class="checkmark"></span>
+              </div>
+            </label>
+          </div>
+          <div class="filter-search">
+            <div class="form-group">
+              <input type="submit" class="form-control" value="Done" (click)="filter()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- login section end here -->
+</section>
+<div class="overlay" *ngIf="perVar>0">
+  <div class="loader-wrap">
+    <div>YOUR ARTICLE IS IN THE OVEN</div>
+    <div>You need to kill some time, so while you are waiting</div>
+    <app-progress-bar [percentage]="perVar"></app-progress-bar>
+  </div>
+</div>

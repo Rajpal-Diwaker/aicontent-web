@@ -1,0 +1,38 @@
+<section class="contact-wrap">
+  <div class="contact-rw" id="contact-us">
+    <div class="container">
+      <h2>Contact us</h2>
+      <div class="form-wrapper">
+        <form [formGroup]="contactFrm" (ngSubmit)="contactSubmit()">
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="name" placeholder="Name">
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+              <div *ngIf="f.name.errors.required"><span style='color: red;'>Name is required</span></div>
+              <div *ngIf="f.name.errors.pattern"><span style='color: red;'>Name must be valid</span></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="email" placeholder="Email">
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required"><span style='color: red;'>Email is required</span></div>
+              <div *ngIf="f.email.errors.email"><span style='color: red;'>Email must be a valid email address</span></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="subject" placeholder="Subject">
+            <div *ngIf="submitted && f.subject.errors" class="invalid-feedback">
+              <div *ngIf="f.subject.errors.required"><span style='color: red;'>Subject is required</span></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="" rows="3" formControlName="message" placeholder="Message"></textarea>
+            <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+              <div *ngIf="f.message.errors.required"><span style='color: red;'>Message is required</span></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary"><i *ngIf="submitted" class="fa fa-circle-o-notch fa-spin"></i> Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

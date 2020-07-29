@@ -1,0 +1,81 @@
+<div class="wrapper" id="wrapper">
+  <div class="main-content">
+    <div class="review-wrapper">
+      <app-header></app-header>
+      <div class="review-rw">
+        <div class="content-rw">
+          <div class="container">
+            <div class="review-content">
+              <div class="content-listing">
+                <label>Topic: </label>
+                <span>{{ articleObj.topic | titlecase }}</span>
+              </div>
+              <div class="content-listing">
+                <label>Attributes: </label>
+                <span>{{ words }}</span>
+              </div>
+              <div class="content-listing">
+                <label>Words: </label>
+                <span>{{ words }}</span>
+              </div>
+              <div class="content-listing">
+                <label>Language: </label>
+                <span>{{ articleObj.lang | titlecase }}</span>
+              </div>
+              <div class="content-listing">
+                <label>Industry: </label>
+                <span>{{ articleObj.industry | titlecase }}</span>
+              </div>
+            </div>
+            <div class="review-label">
+              <span class="percentage">{{uniqueness}}%</span>
+              <span class="txt-label">uniqueness</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="google_translate_element">
+      <div class="intro-wrapper" *ngIf="article.introduction">
+        <div class="container">
+          <h2>Introduction</h2>
+          <p *ngIf="!rewriteFlag">{{ article.introduction | striphtml }}</p>
+          <ejs-richtexteditor *ngIf="rewriteFlag" [(value)]='article.introduction'></ejs-richtexteditor>
+        </div>
+      </div>
+      <div class="body-wrapper">
+        <div class="container">
+          <h2>Body of Content</h2>
+          <p style="white-space: pre-line;" *ngIf="!rewriteFlag">{{ article.body | striphtml }}</p>
+          <div class="table-dyna" *ngFor="let item of article.statistics" [innerHTML]="item"></div>
+          <ejs-richtexteditor *ngIf="rewriteFlag" [(value)]='article.body'></ejs-richtexteditor>
+        </div>
+      </div>
+      <div class="conference-wrapper">
+        <div class="container">
+          <h2 *ngIf="article.conclusion">Conclusion</h2>
+          <p *ngIf="!rewriteFlag">{{ article.conclusion | striphtml }}</p>
+          <div *ngIf="article.quote && !rewriteFlag">
+            <h4>Related Quote on Twitter:</h4>
+            <strong><q>{{ article.quote }}</q></strong>
+          </div>
+          <ejs-richtexteditor *ngIf="rewriteFlag && article.conclusion" [(value)]='article.conclusion'>
+          </ejs-richtexteditor>
+
+          <div class="review-image owl-carousel owl-theme">
+            <div class="image-wrapper" *ngFor="let item of article.images; let i=index">
+              <img *ngIf="item" src="{{item}}" alt="image">
+              <i class="fa fa-eye" (click)="enlarge(item)" aria-hidden="true"></i>
+              <!-- <i class="fa fa-close"></i> -->
+            </div>
+          </div>
+          <a *ngIf="rewriteFlag" class="pointer rewrite_btn" (click)="rewrite()">
+            <i class="loader_fa fa fa-circle-o-notch fa-spin"></i>
+            {{rewriteFlag? 'generate':'rewrite'}}
+          </a>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="wrapper" id="wrapper">
+    <div class="main-content">
+      <app-header></app-header>
+      <div class="article-wrapper">
+        <!-- profile section starts here -->
+        <div class="profile-wrap">
+          <div class="container">
+            <div class="profile-rw clearfix">
+              <div class="image-rw">
+                <img src="assets/images/profile.png" alt="profile">
+              </div>
+              <div class="about-pro">
+                <span>{{profileObj.name | titlecase}}</span>
+                <a class="pointer" (click)="goto('user/edit')">edit profile</a>
+                <div class="email-rw">
+                  <span>{{profileObj.email}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile-content">
+              <img src="assets/images/contentwiz.png" alt="logo">
+              <div class="profile-details">
+                <div class="profile-listing">
+                  <label>company name-</label>
+                  <span>{{profileObj.company | titlecase}}</span>
+                </div>
+                <div class="profile-listing">
+                  <label>mobile number-</label>
+                  <span>{{profileObj.phone}}</span>
+                </div>
+                <div class="profile-listing">
+                  <label>designation-</label>
+                  <span>{{profileObj.designation | titlecase}}</span>
+                </div>
+                <div class="profile-listing">
+                  <label>Address-</label>
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+            <div class="trans-btn">
+              <a class="pointer" (click)="goto('user/transaction')">transaction history</a>
+            </div>
+          </div>
+        </div>
+        <!-- profile section end here -->
+      </div>
+      <app-footer></app-footer>
+    </div>
+  </div>

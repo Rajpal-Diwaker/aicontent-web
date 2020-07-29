@@ -1,0 +1,58 @@
+<div class="wrapper" id="wrapper">
+    <div class="main-content">
+      <app-header></app-header>
+      <div class="article-wrapper">
+        <!-- profile section starts here -->
+        <div class="profile-wrap">
+          <div class="container">
+            <div class="profile-rw clearfix">
+              <div class="image-upload">
+                <div class="image-edit">
+                  <input type='file' (change)="preview($event)" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                  <label for="imageUpload"></label>
+                </div>
+                <div class="image-preview">
+                  <div id="imagePreview" class="imagePreview" [ngStyle]="{background: 'url(' + previewSrc + ')'}">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="edit-profile">
+              <form [formGroup]="editProfile" (ngSubmit)="editProfileFrmSubmit()">
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="phone" placeholder="Number">
+                </div>
+                <div class="form-group">
+                  <div class="file-upload">
+                    <div class="file-select">
+                      <div class="file-select-name" id="noFile">No file chosen...</div> 
+                      <div class="file-select-button" id="fileName">Choose File</div>
+                      <input type="file" name="chooseFile" id="chooseFile">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="company" placeholder="Company Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="designation" placeholder="Designation">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" rows="5" formControlName="address" placeholder="Address"></textarea>
+                </div> 
+                <button type="submit" class="btn btn-primary">update</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- profile section end here -->
+      </div>
+      <app-footer></app-footer>
+    </div>
+  </div>

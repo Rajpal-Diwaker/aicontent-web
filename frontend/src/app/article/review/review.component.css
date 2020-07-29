@@ -1,0 +1,32 @@
+.table-dyna {
+    width:500px;
+    margin: 0 auto;
+    display: table;
+}
+.table-dyna table{
+    border:1px solid #000 !important;
+}
+.table-dyna table > tbody > tr > td, .table-dyna table > thead > tr > th{
+    border:1px solid #000 !important;
+}
+.image-wrapper{
+    position: relative;
+}
+.image-wrapper .fa{
+    font-size: 35px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+}
+.rewrite_btn{
+     margin-bottom: 20px;
+    position: relative;
+}
+.rewrite_btn .loader_fa{
+    position: absolute;
+    top: 18px;
+    left: 27px;
+    font-size: 25px;
+}

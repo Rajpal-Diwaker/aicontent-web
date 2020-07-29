@@ -1,0 +1,469 @@
+
+@media only screen and (max-width: 1800px){
+	.banner-wrapper .content-wrapper h1 {
+		font-size: 36px;
+	}
+}
+@media only screen and (max-width: 1700px){
+	.banner-wrapper .select-wrapper select {
+		font-size: 16px;
+		background-size: 14px;
+		background-position: top 29px right 12px;
+	}
+	.banner-wrapper .select-wrapper input[type="text"] {
+		font-size: 18px;
+		background-position: top 28px right 20px;
+	}
+	.banner-wrapper .select-wrapper input[type="text"]::placeholder {
+		font-size: 18px;
+	}
+	.works-wrapper .works-rw h2, .price-wrapper h2, .contact-rw h2 {
+		font-size: 32px;
+	}
+	.works-content .image-wrap {
+		width: 60px;
+		height: 60px;
+		margin: 0px auto 20px;
+	}
+	.works-content .content-rw h4 {
+		font-size: 20px;
+		min-height: 45px;
+	}
+	.works-content .content-rw p {
+		font-size: 16px;
+		line-height: 32px;
+	}
+	.price-rw h3 {
+		font-size: 42px;
+	}
+	.price-rw span {
+		font-size: 18px;
+	}
+	.price-content .about-price ul li {
+		font-size: 17px;
+	}
+	.footer-content p, .footer-listing ul li a {
+		font-size: 14px;
+	}
+	.intro-wrapper h2, .body-wrapper h2, .conference-wrapper h2{
+		font-size: 32px;
+	}
+	.review-rw .content-rw .content-listing {
+		font-size: 20px;
+		margin-bottom: 0px;
+	}
+	.transaction-wrap h2 {
+		font-size: 32px;
+	}
+}
+@media only screen and (max-width: 1600px){
+	.intro-wrapper p, .body-wrapper p, .conference-wrapper p {
+		line-height: 32px;
+		font-size: 17px;
+	}
+	.signup-rw .signup-content {
+		padding: 40px 30px;
+	}
+	.sign-logo img {
+		margin: 0px auto 30px;
+		width: 100px;
+	}
+	.modal.signup-wrap .modal-dialog {
+		/*max-height: 700px;*/
+	}
+	.verify-wrap form .form-group {
+		width: 65px;
+		height: 65px;
+	}
+}
+@media only screen and (max-width: 1440px){
+	.banner-wrapper .content-wrapper h1 {
+		font-size: 34px;
+	}
+	.banner-wrapper .content-wrapper p {
+		font-size: 18px;
+	}
+	.works-wrapper .works-rw h2, .price-wrapper h2, .contact-rw h2 {
+		font-size: 28px;
+	}
+	.works-wrapper .works-rw h2 {
+		margin-bottom: 30px;
+	}
+	.works-content .content-rw h4 {
+		font-size: 18px;
+		min-height: 40px;
+	}
+	.price-rw h3 {
+		font-size: 38px;
+	}
+	.price-content .about-price ul li {
+		font-size: 15px;
+	}
+	.price-listing .about-price a {
+		font-size: 16px;
+	}
+	.intro-wrapper h2, .body-wrapper h2, .conference-wrapper h2{
+		font-size: 28px;
+	}
+	.modal.signup-wrap .modal-dialog {
+		/*max-height: 600px;*/
+	}
+	.signup-rw .signup-content {
+		padding: 20px 30px;
+	}
+	.sign-logo img {
+		margin: 0px auto 20px;
+		width: 80px;
+	}
+	.signup-rw .signup-content .form-group {
+		margin-bottom: 15px;
+	}
+	.signup-rw .signup-content input::placeholder, .signup-rw .signup-content input {
+		font-size: 14px;
+	}
+	.signup-content .btn.btn-primary {
+		font-size: 14px;
+		margin-top: 15px;
+	}
+	.verify-wrap form .form-group {
+		width: 55px;
+		height: 55px;
+	}
+	.transaction-wrap h2 {
+		font-size: 28px;
+	}
+}
+@media only screen and (max-width: 1300px){
+	.banner-wrapper .content-wrapper h1 {
+		font-size: 32px;
+	}
+	.banner-wrapper .select-wrapper select, 
+	.banner-wrapper .select-wrapper input[type="text"], 
+	.select-wrapper input[type="submit"] {
+		height: 70px;
+	}
+	.works-content .image-wrap {
+		width: 50px;
+		height: 50px;
+	}
+	.works-content .content-rw h4 {
+		font-size: 16px;
+	}
+	.works-content .content-rw p {
+		font-size: 15px;
+		line-height: 30px;
+	}
+	.search-input h4 {
+		font-size: 15px;
+	}
+	.result-rw ul li a {
+		font-size: 14px;
+		margin-top: 6px;
+	}
+	.intro-wrapper p, .body-wrapper p, .conference-wrapper p {
+		line-height: 30px;
+		font-size: 15px;
+	}
+	.signup-rw .signup-content {
+		padding: 25px 10px;
+	}
+	.sign-logo img {
+		margin: 0px auto 20px;
+		width: 70px;
+	}
+	.modal.signup-wrap .modal-dialog {
+		/*max-height: 560px;*/
+	}
+	.signup-rw form {
+		max-width: 310px;
+	}
+	.signup-rw .signup-content input {
+		height: 40px;
+	}
+	.modal.signup-wrap.signin-wrap .modal-dialog {
+		/*max-height: 520px;*/
+	}
+}
+@media only screen and (max-width: 1199px){
+	.footer-wrapper .list-rw, .footer-wrapper .list-rw ul {
+		padding: 0px;
+		margin-bottom: 0px;
+		margin-top: 15px;
+	}
+	.footer-wrapper .footer-content p {
+		padding: 15px 0px;
+	}
+	.works-wrapper .row-wrap {
+		margin: 0px -25px;
+	}
+	.row-wrap .works-content {
+		margin: 25px;
+	}
+	.signup-rw .signup-content {
+		padding: 10px 10px;
+	}
+	.sign-logo img {
+		width: 60px;
+	}
+	.signup-rw form {
+		max-width: 250px;
+	}
+	.signup-rw .signup-content input {
+		height: 35px;
+	}
+	.modal.signup-wrap .modal-dialog {
+		/*max-height: 500px;*/
+	}
+	.verify-wrap form .form-group {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+@media only screen and (min-width: 992px){
+	.navbar.navbar-default {
+		display: none;
+	}
+}
+@media only screen and (max-width: 991px){
+	.navbar-toggle {
+		display: block!important;
+	}
+	.mobile-hide {
+		display: none!important;
+	}
+	.phone-tab .navbar_collapse_inner {
+		position: fixed;
+		width: 270px;
+		right: -335px;
+		z-index: 6;
+		bottom: 0;
+		top: 0;
+		-webkit-transition: right 0.5s ease-in-out;
+		-moz-transition: right 0.5s ease-in-out;
+		-ms-transition: right 0.5s ease-in-out;
+		-o-transition: right 0.5s ease-in-out;
+		transition: right 0.5s ease-in-out;
+		background: #fff;
+	}
+	.navbar-default.active .navbar_collapse_inner {
+		right: 0px;
+	}
+	.navbar-default.active .overlayshow {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 5;
+		background-color: #000;
+		filter: alpha(opacity=50);
+		opacity: .5;
+	}
+	span.close-menu {
+		position: absolute;
+		right: 275px;
+		top: 10px;
+		cursor: pointer;
+	}
+	.header-wrapper .navbar-header {
+		width: 100%;
+	}
+	.navbar-header .navbar-toggle {
+		margin: 15px 0px;
+	}
+	.header-wrapper .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+	.header-wrapper .navbar-header .navbar-brand {
+		height: 70px;
+	}
+	.header-wrapper .navbar-brand img {
+		width: 80px;
+		margin: 4px;
+	}
+	.close-menu img {
+		width: 30px;
+		height: 30px;
+	}
+	.phone-tab .nav.navbar-nav.navbar-right {
+		float: none !important;
+		margin: 0px;
+	}
+	.phone-tab .navbar-nav li {
+		float: none;
+		text-align: left;
+		margin-right: 0px;
+		border-bottom: 1px solid #ccc;
+	}
+	.phone-tab .navbar-nav li:last-child {
+		border-bottom: 0px;
+	}
+	.phone-tab .navbar-nav .login-btn a {
+		width: 140px;
+		margin: 12px;
+		color: #fff;
+	}
+	.main-content .container {
+		width: 100%;
+		max-width: 100%;
+	}
+	.works-wrapper .row-wrap {
+		margin: 0px -15px;
+	}
+	.row-wrap .works-content {
+		margin: 15px;
+	}
+	.navbar-header .navbar-toggle {
+		padding: 10px 0px;
+	}
+	.banner-wrapper .content-wrapper h1 {
+		font-size: 28px;
+	}
+	.works-wrapper .works-rw h2, .price-wrapper h2, .contact-rw h2 {
+		font-size: 24px;
+	}
+	.price-content:hover .price-listing {
+		filter: unset;
+		opacity: 1;
+		transform: unset;
+	}
+	.price-content:hover .price-listing:hover {
+		filter: unset;
+		opacity: 1;
+		transform: unset;
+		box-shadow: unset;
+		border-style: unset;
+		border-width: unset;
+		border-color: unset;
+		border-right: 4px solid #f4f2f2;
+	}
+	.price-content .about-price ul li {
+		font-size: 14px;
+	}
+	.intro-wrapper h2, .body-wrapper h2, .conference-wrapper h2{
+		font-size: 24px;
+	}
+	.signup-rw form {
+		max-width: 450px;
+	}
+	.sign-logo img {
+		width: 80px;
+	}
+	.transaction-wrap h2 {
+		font-size: 24px;
+	}
+}
+@media only screen and (max-width: 767px){
+	.works-wrapper .row-wrap {
+		flex-flow: wrap;
+	}
+	.row-wrap .works-content{
+		width: 100%;
+	}
+	.price-content .price-listing {
+		margin-bottom: 20px;
+		border-right: 0px;
+	}
+	.price-content:hover .price-listing:hover{
+		border-right: 0px;
+	}
+	.banner-wrapper .content-wrapper h1 {
+		font-size: 26px;
+	}
+	.banner-wrapper .content-wrapper p {
+		font-size: 16px;
+	}
+	.works-wrapper .works-rw, .price-wrapper {
+		padding: 75px 0px;
+	}
+	.works-wrapper .works-rw h2, .price-wrapper h2, .contact-rw h2 {
+		font-size: 22px;
+		margin-bottom: 50px;
+	}
+	.intro-wrapper h2, .body-wrapper h2, .conference-wrapper h2{
+		font-size: 22px;
+	}
+	.review-btn a {
+		float: none;
+		margin-top: 30px;
+		margin-bottom: 40px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.article-rw .review-rw .content-rw .content-listing {
+		font-size: 22px;
+	}
+	.conference-wrapper .review-image .image-wrapper {
+		width: 130px;
+		height: 130px;
+	}
+	.signup-wrap .modal-dialog {
+		margin: 40px auto;
+	}
+	.transaction-wrap h2 {
+		font-size: 22px;
+	}
+	.search-container form {
+		width: 40%;
+	}
+	.review-btn a{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 640px){
+	.modal.signup-wrap .modal-dialog {
+		width: 85%;
+	}
+	.review-rw .review-content {
+		width: 60%;
+	}
+	.review-rw .review-per {
+		float: right;
+		width: calc(100% - 60%);
+	}
+	.article-rw .review-rw .content-rw .content-listing {
+		font-size: 19px;
+	}
+}
+@media only screen and (max-width: 540px){
+	.edit-profile form .form-group {
+		width: 100%;
+		margin-right: 0px;
+	}
+	.review-rw .review-content, .article-rw .review-per {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	.review-per .review-btn a{
+		width: 50%;
+	}
+	.review-rw .review-content{
+		margin-bottom: 20px;
+	}
+	.review-rw .review-per {
+		float: none;
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 420px){
+	.profile-rw .image-rw {
+		float: none;
+		margin: 0px auto;
+	}
+	.profile-rw .about-pro {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	.trans-content .details {
+		float: none;
+		width: 100%;
+	}
+	.download-btn a {
+		float: none;
+		margin-top: 20px;
+	}
+}

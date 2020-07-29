@@ -1,0 +1,58 @@
+<div class="select-wrapper">
+  <div class="container">
+    <form [formGroup]="userQueryForm" (ngSubmit)="userQuerySubmit()">
+      <div class="row">
+        <div class="col-sm-4 col-md-2 padding-0">
+          <div class="form-group">
+            <select class="form-control" id="targetLang" formControlName="lang">
+              <option *ngFor="let item of langArr" value="{{item.shortLang}}">{{item.lang | titlecase}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-8 padding-0">
+          <div class="form-group">
+            <textarea id="topic" formControlName="topic" class="form-control" placeholder="Enter Topic:"></textarea>
+            <i class="fa fa-filter" data-toggle="modal" data-target="#filter"></i>
+          </div>
+          <div class="search-input" *ngIf="suggestionBoxFlag">
+            <div class="row">
+              <div class="col-sm-6 padding-0 search-result">
+                <div class="result-rw">
+                  <h4>suggested topics</h4>
+                  <ul>
+                    <li *ngFor="let item of suggestionArr | paginate: config">
+                      <a (click)="articleBot(item)" class="pointer">{{ item.topic | titlecase }}</a>
+                    </li>
+                  </ul>
+                  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+                </div>
+              </div>
+              <div class="col-sm-6 padding-0 max-wrap">
+                <h4>select maximum word count</h4>
+                <div class="count-rw">
+                  <ng5-slider [(value)]="charLen" [options]="options"></ng5-slider>
+                </div>
+                <div class="filter-selection clearfix">
+                  <div *ngFor="let item of filterObj.contentTypes">
+                    <span *ngIf="item && item.isChecked">
+                        {{ item.name | titlecase }}
+                        <i (click)="removeFilter(item)" class="fa fa-close"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-2 padding-0">
+          <div class="form-group">
+            <i *ngIf="submitFlag" class="fa fa-circle-o-notch fa-spin"></i>
+            <input type="submit" id="frmSubmit" class="form-control" value="search">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>
+

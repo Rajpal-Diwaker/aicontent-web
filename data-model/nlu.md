@@ -1,0 +1,33 @@
+## intent:article
+- [Analytics](analysis) in [banking](banking): Time to realize the value
+- How [Banks](banking) [analyze](analysis) your lifestyle to make finance personal
+- Predictive [Analytics](analysis) For [Retail](retail): What Lies Ahead?
+- How [analytics](analysis) and digital will drive next-generation [retail](retail) merchandising
+- [Health care](healthcare) [analytics](analysis):The combined power of data and expertise
+- The combined power of [data](big data) and expertise
+- [Big Data](big data) [Analytics](analysis) in [Manufacturing](manufacturing) : How do we leverage existing data
+- [Manufacturing](manufacturing): Analytics[analysis] unleashes productivity and profitability
+- Data and Analytics[analysis] in the [Manufacturing](manufacturing) sector
+- Reducing Churn in [Telecom](telecom) through Advanced Analytics(analysis)
+- Commercialise to win: How trusted D&A drives success for [telecoms](telecom)
+- [Nike](nike) Buys [Predictive analysis](predictive analysis) in fresh [digital](digital) push
+- [coronavirus pandemic](coronavirus pandemic)
+- The [health care industry](healthcare) turns to [big data](big data)
+- Look and feel good: How [tech](technology) could save the [fashion industry](fashion industry)
+- [Auto](automotive) & [Transport](transportation) Roundup: [Market](market) Talk
+- [McDonald's](mcdonald) Bites on [Big Data](big data) With [$300 Million Acquisition]($300 million acquisition)
+- Why [data science](data science) at [banks](banking) is [missing the mark](missing point), and [how to fix it](how to solve)
+- [Google](google) Secretly [Tests](tests) [Medical Records](medical records) [Search Tool](search engine) On Nation’s Largest [Nonprofit Health System](health system), Documents Show
+- [AI](artificial intelligence) [Data](big data) Lake: Connecting all your [enterprise data](enterprise data)
+- [Survellience](survellience) [cities](cities)
+
+## intent:news
+- Share some latest news around the [world](category)?
+- Share some latest news in [sports](category)?
+- What is going on in [technology](category)?
+- Tell me some news about [fashion](category)
+- Tell me some news about [business](category)
+- Tell me some news about [arts](category)
+- What is going on in [arts](category)
+- What is cooking in [food](category)
+- [movies](category)

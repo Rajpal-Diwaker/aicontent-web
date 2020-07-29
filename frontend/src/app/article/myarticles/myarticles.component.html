@@ -1,0 +1,56 @@
+<div class="wrapper" id="wrapper">
+  <div class="main-content">
+    <div class="article-wrapper">
+      <app-header></app-header>
+      <div class="article-rw">
+        <div class="search-container">
+          <div class="container">
+            <form>
+              <input (keyup)="localSearch($event.target.value)" type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="review-rw" *ngFor="let item of myArticlesArr">
+          <div class="content-rw">
+            <div class="container">
+              <div class="review-content">
+                <div class="content-listing">
+                  <label>topic:</label>
+                  <span>{{item?.topic}}</span>
+                </div>
+                <div class="content-listing">
+                  <label>attribute:</label>
+                  <span>550</span>
+                </div>
+                <div class="content-listing">
+                  <label>words:</label>
+                  <span>550</span>
+                </div>
+                <div class="content-listing">
+                  <label>language:</label>
+                  <span>english</span>
+                </div>
+                <div class="content-listing">
+                  <label>Date:</label>
+                  <span>{{ item?.createdAt | date: mediumDate }}</span>
+                </div>
+              </div>
+              <div class="review-per">
+                <div class="review-label">
+                  <span class="percentage">87%</span>
+                  <span class="txt-label">uniqueness</span>
+                </div>
+                <div class="review-btn clearfix">
+                  <a class="pointer" (click)="download(item)">download</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <no-record-found *ngIf="myArticlesArr?.length==0"></no-record-found>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

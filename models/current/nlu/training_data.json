@@ -1,0 +1,135 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "article",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Analytics",
+            "entity": "analysis"
+          },
+          {
+            "start": 13,
+            "end": 20,
+            "value": "banking",
+            "entity": "banking"
+          }
+        ],
+        "text": "Analytics in banking: Time to realize the value"
+      },
+      {
+        "intent": "news",
+        "entities": [
+          {
+            "start": 34,
+            "end": 39,
+            "value": "world",
+            "entity": "category"
+          }
+        ],
+        "text": "Share some latest news around the world?"
+      },
+      {
+        "intent": "news",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "sports",
+            "entity": "category"
+          }
+        ],
+        "text": "Share some latest news in sports?"
+      },
+      {
+        "intent": "news",
+        "entities": [
+          {
+            "start": 20,
+            "end": 30,
+            "value": "technology",
+            "entity": "category"
+          }
+        ],
+        "text": "What is going on in technology?"
+      },
+      {
+        "intent": "news",
+        "entities": [
+          {
+            "start": 24,
+            "end": 31,
+            "value": "fashion",
+            "entity": "category"
+          }
+        ],
+        "text": "Tell me some news about fashion"
+      },
+      {
+        "intent": "news",
+        "entities": [
+          {
+            "start": 24,
+            "end": 32,
+            "value": "business",
+            "entity": "category"
+          }
+        ],
+        "text": "Tell me some news about business"
+      },
+      {
+        "intent": "news",
+        "entities": [
+          {
+            "start": 24,
+            "end": 28,
+            "value": "arts",
+            "entity": "category"
+          }
+        ],
+        "text": "Tell me some news about arts"
+      },
+      {
+        "intent": "news",
+        "entities": [
+          {
+            "start": 20,
+            "end": 24,
+            "value": "arts",
+            "entity": "category"
+          }
+        ],
+        "text": "What is going on in arts"
+      },
+      {
+        "intent": "news",
+        "entities": [
+          {
+            "start": 19,
+            "end": 23,
+            "value": "food",
+            "entity": "category"
+          }
+        ],
+        "text": "What is cooking in food"
+      },
+      {
+        "intent": "news",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "movies",
+            "entity": "category"
+          }
+        ],
+        "text": "movies"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}
